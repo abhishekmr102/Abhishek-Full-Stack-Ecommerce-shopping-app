@@ -25,6 +25,7 @@ const filterProductController = require('../controller/product/filterProduct')
 const paymentController = require('../controller/order/paymentController')
 const webhooks = require('../controller/order/webhook')
 const orderController = require('../controller/order/order.Controller')
+const allOrderController = require('../controller/order/allOrder.controller')
 
 
 
@@ -60,6 +61,7 @@ router.post("/delete-cart-product",authToken,deleteAddToCartProduct)
 router.post("/checkout",authToken,paymentController)
 router.post("/webhook",webhooks) //api/webhook 1:35:33 continue.... stripe cli not login some issues face
 router.get("/order_list",authToken,orderController)
+router.get("/all-order",authToken,allOrderController)
 
 
 
